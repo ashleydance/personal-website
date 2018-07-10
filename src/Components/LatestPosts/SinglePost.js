@@ -5,7 +5,7 @@ const SinglePost = props => {
     <div className="single-post">
       <h2>{props.title}</h2>
       <p>Content blurb goes here</p>
-      <a href={'#' + props.slug}>Read More</a>
+      <a href={props.slug}>Read More</a>
     </div>
   );
 }

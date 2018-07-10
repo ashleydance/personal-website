@@ -38,7 +38,6 @@ class LatestPosts extends React.Component {
     )
   }
 
-
 };
 
 export default LatestPosts;
