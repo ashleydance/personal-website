@@ -1,12 +1,13 @@
 import React from 'react'
 import Header from '../Base/Header';
+import LatestPosts from '../Components/LatestPosts';
 
 class Home extends React.Component {
   render() {
     return (
       <div>
         <Header />
-        <h1>Home</h1>
+        <LatestPosts />
       </div>
     );
   }
