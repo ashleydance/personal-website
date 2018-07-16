@@ -29,8 +29,9 @@ class LatestPosts extends React.Component {
         {this.state.posts.map( post =>
           <SinglePost
             key={post.id}
+            id={post.id}
             title={post.title.rendered}
-            slug={post.slug}
+            slug={`/blog/${post.slug}`}
             blurb={post.excerpt.rendered.replace(/<(?:.|\n)*?>/gm, '')}
           />
         )}
