@@ -8,7 +8,8 @@ class SingleBlog extends React.Component {
     super(props);
 
     this.state = {
-      post: null
+      post: null,
+      loading: true
     }
   }
 
@@ -21,7 +22,8 @@ class SingleBlog extends React.Component {
     .then( response => {
       const post = response.data
       this.setState({
-        post
+        post: post,
+        loading: false
       });
     })
     .catch( error => {
@@ -33,6 +35,13 @@ class SingleBlog extends React.Component {
     return (
       <div>
         <Header title={this.props.location.state.title} />
+        <div className="container">
+        {this.state.loading ? (
+          <h2 className="center">Loading</h2>
+        ) : (
+          <div dangerouslySetInnerHTML={{__html: this.state.post.content.rendered}} />
+        )}
+        </div>
       </div>
     );
   }

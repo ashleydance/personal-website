@@ -1,5 +1,14 @@
+* {
+  box-sizing: border-box;
+}
+
 body {
   font-family: 'Open Sans', sans-serif;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
 }
 
 h1,h2,h3,h4,h5,h6 {
@@ -45,8 +54,8 @@ header.site-header {
 }
 
 .container {
-  width: 100%;
-  max-width: 1140px;
+  width: 1140px;
+  max-width: 100%;
   padding-right: 15px;
   padding-left: 15px;
   margin-right: auto;
