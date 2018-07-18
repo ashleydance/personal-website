@@ -26,13 +26,14 @@ class LatestPosts extends React.Component {
   render() {
     return (
       <div>
+        <h2 className="center">My latest ramblings.</h2>
         {this.state.posts.map( post =>
           <SinglePost
             key={post.id}
             id={post.id}
             title={post.title.rendered}
+            image="https://picsum.photos/600/200?random"
             slug={`/blog/${post.slug}`}
-            blurb={post.excerpt.rendered.replace(/<(?:.|\n)*?>/gm, '')}
           />
         )}
       </div>
