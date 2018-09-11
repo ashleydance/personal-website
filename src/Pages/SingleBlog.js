@@ -37,9 +37,9 @@ class SingleBlog extends React.Component {
         <Header title={this.props.location.state.title} />
         <div className="container">
         {this.state.loading ? (
-          <h2 className="center">Loading</h2>
+          <h2 className="center">Loading...</h2>
         ) : (
-          <div dangerouslySetInnerHTML={{__html: this.state.post.content.rendered}} />
+          <div className="content" dangerouslySetInnerHTML={{__html: this.state.post.content.rendered}} />
         )}
         </div>
       </div>

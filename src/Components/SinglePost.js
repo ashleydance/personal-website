@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import '../../scss/single-post.css';
+import '../scss/single-post.css';
 
 const SinglePost = props => {
 
