@@ -1,15 +1,15 @@
-.single-post {
+.blog-card {
   width: 600px;
   max-width: 100%;
   margin: 0 auto 40px auto;
   padding: 0 0 40px;
   position: relative;
   text-align: center; }
-  .single-post:last-child {
+  .blog-card:last-child {
     margin-bottom: 0; }
-    .single-post:last-child:after {
+    .blog-card:last-child:after {
       display: none; }
-  .single-post:after {
+  .blog-card:after {
     content: "";
     position: absolute;
     bottom: 0;
@@ -19,13 +19,13 @@
     height: 1px;
     width: 75%;
     background: rgba(91, 86, 220, 0.3); }
-  .single-post .image {
+  .blog-card .image {
     width: 100%;
     height: 200px;
     background-size: cover;
     background-position: center;
     background-color: rgba(0, 0, 0, 0.5);
     box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23); }
-  .single-post h3 {
+  .blog-card h3 {
     margin: 16px 0;
     font-size: 20px; }

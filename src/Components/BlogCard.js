@@ -1,15 +1,15 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import '../scss/single-post.css';
+import '../scss/blog-card.css';
 
-const SinglePost = props => {
+const BlogCard = props => {
 
   const styles = {
     backgroundImage: `url('${props.image}')`
   }
 
   return (
-    <div className="single-post">
+    <div className="blog-card">
       <div className="image" style={styles}></div>
       <h3>{props.title}</h3>
       <Link className="btn" to={{
@@ -25,4 +25,4 @@ const SinglePost = props => {
   );
 }
 
-export default SinglePost;
+export default BlogCard;

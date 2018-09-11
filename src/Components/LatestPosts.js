@@ -1,6 +1,6 @@
 import React from 'react';
 import axios from 'axios';
-import SinglePost from './SinglePost';
+import BlogCard from './BlogCard';
 
 class LatestPosts extends React.Component {
 
@@ -28,7 +28,7 @@ class LatestPosts extends React.Component {
       <div>
         <h2 className="center">My latest ramblings.</h2>
         {this.state.posts.map( post =>
-          <SinglePost
+          <BlogCard
             key={post.id}
             id={post.id}
             title={post.title.rendered}
