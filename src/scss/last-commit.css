@@ -1,6 +1,7 @@
 .last-commit p {
   color: #fff;
-  font-size: 14px;
+  font-weight: 600;
+  font-size: 18px;
   margin: 0 0 5px; }
 
 .last-commit a {

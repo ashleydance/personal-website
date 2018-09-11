@@ -1,6 +1,7 @@
 import React from 'react'
 import axios from 'axios';
 import LastCommit from '../Components/LastCommit';
+import SocialMedia from '../Components/SocialMedia';
 import '../scss/footer.css';
 
 class Footer extends React.Component {
@@ -31,6 +32,12 @@ class Footer extends React.Component {
   render() {
     return(
       <footer className="site-footer">
+          <SocialMedia
+            github="https://github.com/ashleydance"
+            twitter="https://twitter.com/ashleydance_"
+            linkedin="https://www.linkedin.com/in/ashley-dance/"
+            instagram="https://www.instagram.com/_ashleydance/"
+          />
           {this.state.loading ? (
             <h2 className="center">Loading...</h2>
           ) : (
