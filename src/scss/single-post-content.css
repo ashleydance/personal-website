@@ -1,0 +1,8 @@
+.single-post-content {
+  padding: 30px 15px;
+  width: 800px;
+  margin: 0 auto;
+  max-width: 100%; }
+  @media (max-width: 768px) {
+    .single-post-content {
+      padding: 15px; } }

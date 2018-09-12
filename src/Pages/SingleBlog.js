@@ -2,6 +2,7 @@ import React from 'react'
 import axios from 'axios'
 import createDOMPurify from 'dompurify';
 import Header from '../Base/Header';
+import Footer from '../Base/Footer';
 import SinglePostContent from '../Components/SinglePostContent';
 import LoadingCat from '../Components/LoadingCat';
 
@@ -50,6 +51,7 @@ class SingleBlog extends React.Component {
             <SinglePostContent content={this.state.post}/>
           )}
         </div>
+        <Footer />
       </div>
     );
   }
