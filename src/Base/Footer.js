@@ -19,7 +19,7 @@ class Footer extends React.Component {
   componentDidMount() {
     axios.get('https://api.github.com/repos/ashleydance/personal-website/commits')
     .then( response => {
-      const lastCommit = response.data[0].commit;
+      const lastCommit = response.data[0];
       this.setState({
         lastCommit,
         loading: false
