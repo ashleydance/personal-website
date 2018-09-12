@@ -2,6 +2,7 @@ import React from 'react'
 import axios from 'axios';
 import LastCommit from '../Components/LastCommit';
 import SocialMedia from '../Components/SocialMedia';
+import LoadingCat from '../Components/LoadingCat';
 import '../scss/footer.css';
 
 class Footer extends React.Component {
@@ -39,7 +40,7 @@ class Footer extends React.Component {
             instagram="https://www.instagram.com/_ashleydance/"
           />
           {this.state.loading ? (
-            <h2 className="center">Loading...</h2>
+            <LoadingCat />
           ) : (
             <LastCommit commit={this.state.lastCommit} />
           )}

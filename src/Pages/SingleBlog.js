@@ -3,6 +3,7 @@ import axios from 'axios'
 import createDOMPurify from 'dompurify';
 import Header from '../Base/Header';
 import SinglePostContent from '../Components/SinglePostContent';
+import LoadingCat from '../Components/LoadingCat';
 
 class SingleBlog extends React.Component {
 
@@ -44,7 +45,7 @@ class SingleBlog extends React.Component {
         <Header title={this.props.location.state.title} />
         <div className="single-post-content">
           {this.state.loading ? (
-            <h2 className="center">Loading...</h2>
+            <LoadingCat />
           ) : (
             <SinglePostContent content={this.state.post}/>
           )}
