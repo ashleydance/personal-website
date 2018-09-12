@@ -20,7 +20,7 @@ class Home extends React.Component {
 
   componentDidMount() {
     // Get the ACF data from the WP API
-    axios.get(`http://blog.ashleydance.co.uk/wp-json/acf/v3/pages/23`)
+    axios.get(`https://blog.ashleydance.co.uk/wp-json/acf/v3/pages/23`)
     .then( response => {
       this.setState({
         introTitle: response.data.acf.intro_title,

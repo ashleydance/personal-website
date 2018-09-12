@@ -23,7 +23,7 @@ class SingleBlog extends React.Component {
     const postID = this.props.location.state.postID
 
     // Get the post from the WP API
-    axios.get(`http://blog.ashleydance.co.uk/wp-json/wp/v2/posts/${postID}`)
+    axios.get(`https://blog.ashleydance.co.uk/wp-json/wp/v2/posts/${postID}`)
     .then( response => {
 
       // Clean the data from WP Rest API

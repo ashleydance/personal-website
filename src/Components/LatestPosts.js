@@ -13,7 +13,7 @@ class LatestPosts extends React.Component {
   }
 
   componentDidMount() {
-    axios.get('http://blog.ashleydance.co.uk/wp-json/wp/v2/posts')
+    axios.get('https://blog.ashleydance.co.uk/wp-json/wp/v2/posts')
     .then( response => {
       const posts = response.data
       this.setState({posts: posts});
