@@ -4,7 +4,7 @@ import '../scss/base.css';
 
 // Pages
 import Home from '../Pages/Home';
-// import About from '../Pages/About';
+import About from '../Pages/About';
 import SingleBlog from '../Pages/SingleBlog';
 import NotFound from '../Pages/NotFound';
 
@@ -12,7 +12,7 @@ const Router = () => (
   <BrowserRouter>
     <Switch>
       <Route exact path="/" component={Home} />
-      <Route exact path="/about" component={NotFound} />
+      <Route exact path="/about" component={About} />
       <Route exact path="/blog/:slug" component={SingleBlog} />
       <Route component={NotFound} />
     </Switch>
