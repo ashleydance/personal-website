@@ -27,7 +27,6 @@ class About extends React.Component {
     .catch( error => {
       console.log(`Something went wrong! ${error}`);
     });
-    console.log(this.state);
   }
 
   render() {
