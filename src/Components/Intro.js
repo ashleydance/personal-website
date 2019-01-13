@@ -1,11 +1,15 @@
 import React from 'react'
-import '../scss/textblock.css';
+import PropTypes from 'prop-types'
+import '../scss/textblock.css'
 
-const Intro = props => (
-  <section className="intro-section">
+export const Intro = props => (
+  <section className='intro-section'>
     <h2>{props.title}</h2>
     <p>{props.text}</p>
   </section>
-);
+)
 
-export default Intro;
+Intro.propTypes = {
+  title: PropTypes.string.isRequired,
+  text: PropTypes.string.isRequired
+}

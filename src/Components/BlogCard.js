@@ -1,18 +1,18 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
-import '../scss/blog-card.css';
+import React from 'react'
+import PropTypes from 'prop-types'
+import { Link } from 'react-router-dom'
+import '../scss/blog-card.css'
 
-const BlogCard = props => {
-
+export const BlogCard = props => {
   const styles = {
     backgroundImage: `url('${props.image}')`
   }
 
   return (
-    <div className="blog-card">
-      <div className="image" style={styles}></div>
+    <div className='blog-card'>
+      <div className='image' style={styles} />
       <h3>{props.title}</h3>
-      <Link className="btn" to={{
+      <Link className='btn' to={{
         pathname: props.slug,
         state: {
           postID: props.id,
@@ -22,7 +22,12 @@ const BlogCard = props => {
         Read More
       </Link>
     </div>
-  );
+  )
 }
 
-export default BlogCard;
+BlogCard.propTypes = {
+  image: PropTypes.string.isRequired,
+  title: PropTypes.string.isRequired,
+  slug: PropTypes.string.isRequired,
+  id: PropTypes.string.isRequired
+}

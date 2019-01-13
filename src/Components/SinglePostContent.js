@@ -1,9 +1,11 @@
 import React from 'react'
-import '../scss/single-post-content.css';
+import PropTypes from 'prop-types'
+import '../scss/single-post-content.css'
 
-const SinglePostContent = props => (
-  <div className="container" dangerouslySetInnerHTML={{__html: props.content }}>
-  </div>
-);
+export const SinglePostContent = props => (
+  <div className='container' dangerouslySetInnerHTML={{ __html: props.content }} />
+)
 
-export default SinglePostContent;
+SinglePostContent.propTypes = {
+  content: PropTypes.node.isRequired
+}
