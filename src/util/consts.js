@@ -1,0 +1,1 @@
+export const TWITCH_CLIENT_SECRET = 'njmor6ho4xdqta954z4p9yo1ib7ixl'
