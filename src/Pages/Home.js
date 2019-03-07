@@ -58,7 +58,7 @@ export default class Home extends React.Component {
 
   render () {
     return (
-      <div>
+      <main>
         <Header title="👋 I'm Ashley Dance" />
         <div className='container'>
           {this.renderIntro()}
@@ -66,7 +66,7 @@ export default class Home extends React.Component {
           <LatestPosts />
         </div>
         <Footer />
-      </div>
+      </main>
     )
   }
 }

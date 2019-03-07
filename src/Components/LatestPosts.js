@@ -21,8 +21,7 @@ export class LatestPosts extends React.Component {
   render () {
     const { posts } = this.state
     return (
-      <div>
-        <h2 className='center'>My latest ramblings.</h2>
+      <div style={{paddingTop: 50}}>
         {posts.map(post =>
           <BlogCard
             key={post.id}
