@@ -2,7 +2,6 @@ import React, { Component } from 'react'
 import axios from 'axios'
 import { LastCommit } from '../Components/LastCommit'
 import { SocialMedia } from '../Components/SocialMedia'
-import { LoadingCat } from '../Components/LoadingCat'
 import '../scss/footer.css'
 
 export default class Footer extends Component {
@@ -25,6 +24,12 @@ export default class Footer extends Component {
       })
   }
 
+  renderLastCommit() {
+    const { loading, lastCommit } = this.state
+    if (loading) return
+    return <LastCommit commit={lastCommit} />
+  }
+
   render () {
     return (
       <footer className='site-footer'>
@@ -35,11 +40,7 @@ export default class Footer extends Component {
           twitch='https://www.twitch.tv/ashleydance'
           instagram='https://www.instagram.com/_ashleydance/'
         />
-        {this.state.loading ? (
-          <LoadingCat />
-        ) : (
-          <LastCommit commit={this.state.lastCommit} />
-        )}
+        {this.renderLastCommit()}
       </footer>
     )
   }

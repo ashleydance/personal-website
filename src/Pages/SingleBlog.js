@@ -34,19 +34,21 @@ export default class SingleBlog extends React.Component {
       })
   }
 
+  renderContent() {
+    const { loading, post } = this.state
+    if ( loading ) return <LoadingCat />
+    return <SinglePostContent content={post} />
+  }
+
   render () {
     return (
-      <div>
+      <main>
         <Header title={this.props.location.state.title} />
         <div className='single-post-content'>
-          {this.state.loading ? (
-            <LoadingCat />
-          ) : (
-            <SinglePostContent content={this.state.post} />
-          )}
+          {this.renderContent()}
         </div>
         <Footer />
-      </div>
+      </main>
     )
   }
 }

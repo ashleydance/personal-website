@@ -6,7 +6,7 @@ export default function getTwitchStatus () {
     headers: {'Client-ID': TWITCH_CLIENT_SECRET},
   })
     .then( response => {
-      if (  response.data.data.length > 0 && response.data.data[0].type === 'live') {
+      if ( response.data.data.length > 0 && response.data.data[0].type === 'live') {
         return true
       } else {
         return false

@@ -8,8 +8,8 @@ import axios from 'axios'
 export default class About extends React.Component {
   state = {
     loading: true,
-    title: 'Hello World',
-    text: 'This is text'
+    title: '',
+    text: ''
   }
 
   componentDidMount () {
@@ -28,20 +28,24 @@ export default class About extends React.Component {
       })
   }
 
+  renderIntro() {
+    const { loading, title, text } = this.state
+    if ( loading ) return <LoadingCat />
+    return (
+      <Intro
+        title={title}
+        text={text}
+      />
+    )
+  }
+
   render () {
     return (
-      <div>
+      <main>
         <Header title='About Me' />
-        {this.state.loading ? (
-          <LoadingCat />
-        )
-          : <Intro
-            title={this.state.title}
-            text={this.state.text}
-          />
-        }
+        {this.renderIntro()}
         <Footer />
-      </div>
+      </main>
     )
   }
 }

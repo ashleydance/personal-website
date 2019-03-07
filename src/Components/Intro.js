@@ -2,10 +2,10 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import '../scss/textblock.css'
 
-export const Intro = props => (
+export const Intro = ({title, text}) => (
   <section className='intro-section'>
-    <h2>{props.title}</h2>
-    <p>{props.text}</p>
+    <h2>{title}</h2>
+    <p>{text}</p>
   </section>
 )
 

@@ -17,7 +17,6 @@ export default class Home extends React.Component {
   }
 
   componentDidMount () {
-
     getTwitchStatus()
       .then( data => {
         if ( data === true ) this.setState({isStreaming: true})
@@ -54,7 +53,6 @@ export default class Home extends React.Component {
 
   renderTwitch () {
     if (!this.state.isStreaming) return
-    console.log('here')
     return <Twitch />
   }
 

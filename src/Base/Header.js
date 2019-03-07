@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 import { Link } from 'react-router-dom'
 import '../scss/header.css'
 
-export const Header = props => (
+export const Header = ({title}) => (
   <header className='site-header'>
     <div className='container'>
       <ul className='menu'>
@@ -13,7 +13,7 @@ export const Header = props => (
         <li><Link to='/contact'>Contact</Link></li>
       </ul>
     </div>
-    <h1>{props.title}</h1>
+    <h1>{title}</h1>
   </header>
 )
 

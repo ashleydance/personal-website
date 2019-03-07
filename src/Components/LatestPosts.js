@@ -19,10 +19,11 @@ export class LatestPosts extends React.Component {
   }
 
   render () {
+    const { posts } = this.state
     return (
       <div>
         <h2 className='center'>My latest ramblings.</h2>
-        {this.state.posts.map(post =>
+        {posts.map(post =>
           <BlogCard
             key={post.id}
             id={post.id}
